@@ -1,0 +1,17 @@
+Avenir
+degit
+flaglib
+gradlew
+hilma
+knip
+mnode
+mnpm
+mnvm
+mpnpm
+nestjs
+optimizelegibility
+preinstall
+shafran
+tseslint
+tsup
+webworker

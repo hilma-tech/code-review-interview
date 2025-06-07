@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "rules": {
+    "exports": "off",
+    "types": "off"
+  },
+  "workspaces": {
+    "clients/*": {
+      "entry": ["src/main.tsx"],
+      "project": ["src/**/*.{ts,tsx}"]
+    },
+    "server": {
+      "entry": ["src/main.ts"],
+      "project": ["src/**/*.ts"]
+    }
+  },
+  "ignoreWorkspaces": ["scripts"],
+  "ignoreDependencies": ["@turbo/gen"],
+  "ignore": ["types/index.d.ts", "turbo/generators/config.ts"]
+}

@@ -1,0 +1,29 @@
+name: "PR Check"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  pr_title:
+    name: "Validate Title"
+    runs-on: "ubuntu-latest"
+    if: github.event.action == 'opened' || github.event.changes.title
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  label_regex:
+    name: "Add label"
+    runs-on: "ubuntu-latest"
+    needs: pr_title
+    steps:
+      - uses: Bhacaz/label-regex@v2.1
+        with:
+          field: title
+          regex: ^chore\(.*(deps)\)|^(fix|hotfix|feat|refactor|docs|test)
+          lowercase: true

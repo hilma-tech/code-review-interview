@@ -1,0 +1,21 @@
+# Auto generated release notes configuration
+changelog:
+  categories:
+    - title: ✨ Features
+      labels:
+        - "feat"
+    - title: 🐛 Fixes
+      labels:
+        - "fix"
+    - title: 🔨 Refactors
+      labels:
+        - "refactor"
+    - title: 📚 Docs
+      labels:
+        - "docs"
+    - title: 🔗 Dependencies
+      labels:
+        - "deps"
+    - title: 🪺 Everything Else
+      labels:
+        - "*"

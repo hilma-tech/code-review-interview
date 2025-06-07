@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+clients/**/android
+clients/**/ios
+dist
+server/src/migrations
+turbo/generators/templates
