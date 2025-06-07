@@ -1,13 +1,15 @@
-# <YOUR PROJECT NAME HERE>
+# Code Review Interview
 
-To use this for your project, press the `Use this template` button.
-
-TODO: add some documentation here!
-
-> [!NOTE]  
+> [!NOTE]
 > Read about [naming conventions](https://hilma.atlassian.net/wiki/spaces/TD/pages/723943513/Naming+Conventions) and more.
 
 ## Installation & Setup
+
+Make sure you have MySQL installed, and that you have a database called `code_review_interview`. You can run:
+
+```bash
+$ mysql -e 'create database if not exists code_review_interview;'
+```
 
 Make sure you have PNPM installed:
 
@@ -92,8 +94,6 @@ This repository uses GitHub Actions to run linting ([ESLint](https://eslint.org/
 This is the sketch of the database, using [mermaid](https://mermaid.js.org/).
 
 Please keep it up to date with the database as you change it.
-
-(TODO: create the database sketch here)
 
 ```mermaid
 erDiagram
