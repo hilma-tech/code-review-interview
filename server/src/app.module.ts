@@ -3,6 +3,7 @@ import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 
 import { getDataSourceOptions } from "./data-source.options";
+import { DepartmentModule } from "./department/department.module";
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { getDataSourceOptions } from "./data-source.options";
     TypeOrmModule.forRootAsync({
       useFactory: getDataSourceOptions,
     }),
+    DepartmentModule,
   ],
   controllers: [],
   providers: [],

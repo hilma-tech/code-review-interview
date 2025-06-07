@@ -97,5 +97,6 @@ Please keep it up to date with the database as you change it.
 
 ```mermaid
 erDiagram
-    TODO
+    DEPARTMENT only one to one or more ROOM : ""
+    DEPARTMENT {}
 ```
