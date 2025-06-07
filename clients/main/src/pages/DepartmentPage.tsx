@@ -6,6 +6,7 @@ import axios from "axios";
 
 import { HEBREW } from "../hebrew";
 import { FormRoomField } from "../components/FormRoomField";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
   name: yup.string().required(HEBREW.requiredField),
@@ -33,8 +34,13 @@ async function postCreateDepartment(values: DepartmentPageFormValues) {
 }
 
 export function DepartmentPage() {
+  const navigate = useNavigate();
+
   const createDepartmentMutation = useMutation({
     mutationFn: postCreateDepartment,
+    onSuccess() {
+      navigate("/departments");
+    },
   });
 
   return (
