@@ -14,4 +14,12 @@ export const HEBREW = {
   signUpHere: "הירשמו כאן",
   loginError: "שגיאה בהתחברות",
   logout: "יציאה",
+  addDepartment: "הוספת מחלקה",
+  departmentName: "שם המחלקה",
+  departmentCode: "קוד המחלקה",
+  rooms: "חדרים",
+  roomName: "שם החדר",
+  roomCode: "קוד החדר",
+  addRoom: "הוסף חדר",
+  save: "שמירה",
 };

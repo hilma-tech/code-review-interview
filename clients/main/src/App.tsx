@@ -5,15 +5,19 @@ import type { TokenResponse } from "@internal/types";
 
 import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
-import { HomePage } from "./pages/HomePage";
+import { DepartmentsPage } from "./pages/DepartmentsPage";
 import { NavigationBar } from "./components/NavigationBar";
+import { DepartmentPage } from "./pages/DepartmentPage";
 
 const router = createBrowserRouter([
   { index: true, element: <LoginPage /> },
   { path: "register", element: <RegisterPage /> },
   {
     element: <NavigationBar />,
-    children: [{ path: "home", element: <HomePage /> }],
+    children: [
+      { path: "departments", element: <DepartmentsPage /> },
+      { path: "add-department", element: <DepartmentPage /> },
+    ],
   },
 ]);
 
@@ -33,7 +37,7 @@ function App() {
       fetchToken={fetchToken}
       fetchAuthData={fetchAuthData}
       redirectOnPrivate={() => "/"}
-      redirectOnPublic={() => "/home"}
+      redirectOnPublic={() => "/departments"}
     >
       <RouterProvider router={router} />
     </AuthProvider>

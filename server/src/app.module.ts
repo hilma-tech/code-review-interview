@@ -5,6 +5,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { AuthModule } from "./auth/auth.module";
 import authConfig from "./auth/auth.config";
 import { getDataSourceOptions } from "./data-source.options";
+import { DepartmentModule } from './department/department.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { getDataSourceOptions } from "./data-source.options";
       useFactory: getDataSourceOptions,
     }),
     AuthModule,
+    DepartmentModule,
   ],
   controllers: [],
   providers: [],
