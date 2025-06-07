@@ -1,1 +1,3 @@
-export type Test = string;
+export interface TokenResponse {
+  token: string | null;
+}

@@ -1,0 +1,17 @@
+export const HEBREW = {
+  websiteTitle: "אתר לדוגמא",
+  register: "הרשמה",
+  login: "כניסה",
+  username: "שם משתמש",
+  password: "סיסמא",
+  confirmPassword: "אישור סיסמא",
+  isAdmin: "מנהל מערכת",
+  requiredField: "שדה חובה",
+  passwordsShouldMatch: "הסיסמאות צריכות להתאים",
+  alreadyRegistered: "כבר רשומים?",
+  notRegistered: "לא רשומים?",
+  loginHere: "היכנסו כאן",
+  signUpHere: "הירשמו כאן",
+  loginError: "שגיאה בהתחברות",
+  logout: "יציאה",
+};

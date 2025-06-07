@@ -10,10 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@internal/constants": "workspace:*",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@hilma/auth-client": "^2.1.2",
+    "@hilma/forms": "^3.1.3",
     "@internal/types": "workspace:*",
+    "@mui/material": "^6.4.12",
+    "@tanstack/react-query": "^5.80.6",
+    "axios": "^1.7.9",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.4",

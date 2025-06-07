@@ -10,7 +10,7 @@
       "project": ["src/**/*.{ts,tsx}"]
     },
     "server": {
-      "entry": ["src/main.ts"],
+      "entry": ["src/main.ts", "src/migrations/*.ts", "src/data-source.ts"],
       "project": ["src/**/*.ts"]
     }
   },
