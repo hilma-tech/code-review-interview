@@ -8,6 +8,7 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import { HEBREW } from "../hebrew";
@@ -75,14 +76,19 @@ async function getDepartmentDetails({
 
 export function DepartmentPage() {
   const { departmentId } = useParams<{ departmentId?: string }>();
+  const navigate = useNavigate();
 
   const createDepartmentMutation = useMutation({
     mutationFn: postDepartment,
+    onSuccess() {
+      navigate("/departments");
+    },
   });
 
   const editDepartmentMutation = useMutation({
     mutationFn: putDepartment,
     async onSuccess() {
+      navigate("/departments");
       await departmentDetailsQuery.refetch();
     },
   });

@@ -6,6 +6,7 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  Query,
 } from "@nestjs/common";
 import type { DepartmentResponse } from "@internal/types";
 
@@ -19,6 +20,11 @@ export class DepartmentController {
   @Post()
   post(@Body() body: CreateOrUpdateDepartmentDTO) {
     return this.departmentService.createDepartment(body);
+  }
+
+  @Get()
+  get(@Query() queryParams: { search: string; page: number; limit: number }) {
+    return this.departmentService.readDepartments(queryParams);
   }
 
   @Put(":departmentId")
