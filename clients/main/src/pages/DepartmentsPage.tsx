@@ -35,25 +35,28 @@ export function DepartmentsPage() {
         `/api/department?search=${search}&page=${page}&limit=15`,
       );
       setDepartments(data);
-      setHighlightedDepartments(
-        departments.map((department) => ({
-          ...department,
-          name: department.name
-            .replace(search, `<b>${search}<b>`)
-            .split("<b>")
-            .map((part, i) =>
-              i % 2 === 0 ? (
-                part
-              ) : (
-                <span key={i} style={{ fontWeight: "bold" }}>
-                  {part}
-                </span>
-              ),
-            ),
-        })),
-      );
     })();
   }, [search, page]);
+
+  useEffect(() => {
+    setHighlightedDepartments(
+      departments.map((department) => ({
+        ...department,
+        name: department.name
+          .replace(search, `<b>${search}<b>`)
+          .split("<b>")
+          .map((part, i) =>
+            i % 2 === 0 ? (
+              part
+            ) : (
+              <span key={i} style={{ fontWeight: "bold" }}>
+                {part}
+              </span>
+            ),
+          ),
+      })),
+    );
+  }, [departments]);
 
   return (
     <Stack component="main" sx={{ p: "16px" }}>
