@@ -24,6 +24,7 @@ export class Room {
 
   @ManyToOne(() => Department, (department) => department.rooms, {
     onDelete: "CASCADE",
+    orphanedRowAction: "delete",
   })
   @JoinColumn({ name: "department_id" })
   department!: Department;
