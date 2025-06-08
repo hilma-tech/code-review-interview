@@ -3,10 +3,10 @@ import Box from "@mui/material/Box";
 import * as yup from "yup";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import { HEBREW } from "../hebrew";
 import { FormRoomField } from "../components/FormRoomField";
-import { useNavigate } from "react-router-dom";
 
 const validationSchema = yup.object({
   name: yup.string().required(HEBREW.requiredField),
