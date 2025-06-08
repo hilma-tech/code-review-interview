@@ -7,7 +7,7 @@ import {
 } from "class-validator";
 import { Type } from "class-transformer";
 
-class CreateDepartmentRoomDTO {
+class CreateOrUpdateDepartmentRoomDTO {
   @IsOptional()
   @IsString()
   roomCode?: string;
@@ -17,7 +17,7 @@ class CreateDepartmentRoomDTO {
   name!: string;
 }
 
-export class CreateDepartmentDTO {
+export class CreateOrUpdateDepartmentDTO {
   @IsOptional()
   @IsString()
   departmentCode?: string;
@@ -28,6 +28,6 @@ export class CreateDepartmentDTO {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => CreateDepartmentRoomDTO)
-  rooms!: CreateDepartmentRoomDTO[];
+  @Type(() => CreateOrUpdateDepartmentRoomDTO)
+  rooms!: CreateOrUpdateDepartmentRoomDTO[];
 }

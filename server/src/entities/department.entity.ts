@@ -13,6 +13,8 @@ export class Department {
   @Column()
   name!: string;
 
-  @OneToMany(() => Room, (room) => room.department, { cascade: true })
+  @OneToMany(() => Room, (room) => room.department, {
+    cascade: true,
+  })
   rooms!: Room[];
 }

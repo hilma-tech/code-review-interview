@@ -25,6 +25,7 @@
     "typeorm": "^0.3.24"
   },
   "devDependencies": {
+    "@internal/types": "workspace:*",
     "@nestjs/cli": "^10.4.9",
     "@nestjs/schematics": "^10.1.4",
     "@types/cookie-parser": "^1.4.9",

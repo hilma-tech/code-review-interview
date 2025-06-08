@@ -18,6 +18,7 @@ const router = createBrowserRouter([
       },
       { path: "departments", element: <DepartmentsPage /> },
       { path: "add-department", element: <DepartmentPage /> },
+      { path: "edit-department/:departmentId", element: <DepartmentPage /> },
     ],
   },
 ]);
