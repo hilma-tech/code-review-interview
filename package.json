@@ -39,7 +39,7 @@
     "stylelint-config-standard-scss": "^11.1.0",
     "stylelint-magic-numbers": "^1.0.5",
     "turbo": "^2.4.0",
-    "typescript-eslint": "^8.18.1"
+    "typescript-eslint": "^8.34.0"
   },
   "packageManager": "pnpm@9.15.0+sha256.09a8fe31a34fda706354680619f4002f4ccef6dadff93240d24ef6c831f0fd28"
 }
